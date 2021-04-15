@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Supermarket Path Finder{% endblock %}</title>
+    <link rel="stylesheet" href="{% static "css/base.css" % }"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<script type="text/javascript">
+  ('.my-select').selectpicker();
+(function () {
+    $('select').selectpicker();
+});
+</script>
+
+<style >
+  .btn-group button {
+  background-color: #D3D3D3; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: black; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 50%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #fffff;
+}
+
+</style>
+  </head>
+ 
+<style>
+    .styled-table {
+    /*border-collapse: collapse;*/
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width: 800px;
+    /*min-width: 400px;*/
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+        em {font-size: 200%;     }
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: '#fffff';
+            -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+        }
+        body:before{
+            content: '';
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .bgform
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 400px;
+            height: 1080px;
+            padding: 80px 40px;
+            box-sizing: border-box;
+            background: rgba(0,0,0,.5);
+        }
+        .avatar {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            top: calc(-80px/2);
+            left: calc(50% - 40px);
+        }
+        .bgform h2 {
+            margin: 0;
+            padding: 0 0 20px;
+            color: #000000;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .bgform p
+        {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            color: #fff;
+        }
+        .bgform input
+        {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .bgform input[type="text"],
+        .bgform input[type="password"]
+        {
+            border: none;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+            font-size: 16px;
+        }
+        .bgformbgform input[type="submit"] {
+            height: 30px;
+            color: #fff;
+            font-size: 15px;
+            background: red;
+            cursor: pointer;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            margin-top: 15%;
+        }
+        .btn-group button {
+            background-color: #4CAF50; /* Green background */
+            border: 1px solid green; /* Green border */
+            color: white; /* White text */
+            padding: 10px 24px; /* Some padding */
+            cursor: pointer; /* Pointer/hand icon */
+            width: 1000%; /* Set a width if needed */
+            display: block; /* Make the buttons appear below each other */
+        }
+        .bgform a
+        {
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        input[type="checkbox"] {
+            width: 20%;
+        }
+        .styled-table thead tr {
+    background-color: #E80018;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #E80018;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #ffffff;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #E80018;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #000000;
+}
+    </style>
+
+
+
+<body>
+
+
+
+    <nav class="navbar  large navbar navbar-inverse bg-inverse" style= "width:100% ; margin: 0 auto;background-color:#E80018">
+    <div class="container">
+            <ul class="nav navbar-nav ">
+              <li ><label style="color:#ffffff">Target</label></li>
+
+</div>
+</nav>
+
+
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Customer Name</th>
+            <th>no. of items</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>#CUS001</td>
+            <td><a href="https://www.w3schools.com/">Dom</td>
+            <td>10</td>
+            <td>In progress</td>
+        </tr>
+        <tr class="active-row">
+            <td>#CUS002</td>
+            <td><a href="https://www.w3schools.com/">Melissa</td>
+            <td>5</td>
+            <td>In progress</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+</body>
+</html>
