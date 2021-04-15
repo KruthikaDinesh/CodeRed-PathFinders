@@ -71,26 +71,30 @@
 <table class="styled-table">
     <thead>
         <tr>
-            <th>Order ID</th>
-            <th>Customer Name</th>
-            <th>no. of items</th>
-            <th>Status</th>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Image</th>
+              <th>Quantity</th>
+              <th>Price</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>#CUS001</td>
-            <td><a href="{% url "items" %}" style="color:#000000">Dom</a></td>
-            <td>10</td>
-            <td>In progress</td>
+                    <td>PRD001</td>
+                    <td>Brown bread</td">
+                    <td><img src="/media/products/2019/05/12/brown_bread.jpeg"></td>
+                    <td>1Kg</td>
+                    <td>$29.0</td>
         </tr>
         <tr class="active-row">
-            <td>#CUS002</td>
-            <td><a href="{% url "items" %}" style="color:#000000" style="text-decoration: none">Melissa</a></td>
-            <td>5</td>
-            <td>In progress</td>
+                    <td>PRD002</td>
+                    <td>Brown bread</td">
+                    <td><img src="/media/products/2019/05/12/brown_bread.jpeg"></td>
+                    <td>1Kg</td>
+                    <td>$29.0</td>
         </tr>
     </tbody>
 </table>
+      <h3 align="center"><a href="{% url "virtual" %}" class="btn btn-success btn-lg">Proceed to Virtual supermarket >>></a><h3>
 </body>
 </html>

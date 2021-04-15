@@ -214,6 +214,10 @@ def thanks(request):
    
     return render(request,'thanks.html')
 
+def items(request):
+   
+    return render(request,'items_list.html')
+
 def product_detail(request, id, slug):
     product = get_object_or_404(Productdb, id=id, slug=slug, available=True)
     cart_product_form = CartAddProductForm()
@@ -286,8 +290,8 @@ class Game:
                 Obstacle(self, tile_object.x, tile_object.y,
                          tile_object.width, tile_object.height)
 
-            item_lst=['Cheese','Banana', 'Grapes']  
-            if tile_object.name in unique_list:    # use item in cart .. find out the value of product(eg cheese)... if that value is present, add to dictionary as {product:vec}
+            item_lst=['Brown bag','Banana']  
+            if tile_object.name in item_lst:    # use item in cart .. find out the value of product(eg cheese)... if that value is present, add to dictionary as {product:vec}
                 Item(self, obj_center, tile_object.name)  # change to all characters to small case.. it will work
         
 

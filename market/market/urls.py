@@ -21,6 +21,7 @@ urlpatterns = [
       url(r'^virtual/$', core_views.virtual, name='virtual'),
       url(r'^compare/$', core_views.compare, name='compare'),
       url(r'^thanks/$', core_views.thanks, name='thanks'),
+      url(r'^items/$', core_views.items, name='items'),
 
       url(r'^signup/$', core_views.signup, name='signup'),
       url(r'^home2/', core_views.help ,name='home2'),
