@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Supermarket Path Finder{% endblock %}</title>
+    <title>{% block title %}Path Finder{% endblock %}</title>
     <link rel="stylesheet" href="{% static "css/base.css" % }"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -58,10 +58,10 @@
     </style>
 
 <body>
-    <nav class="navbar  large navbar navbar-inverse bg-inverse" style= "width:100% ; margin: 0 auto;background-color:#E80018">
+    <nav class="navbar" style= "width:100% ; background-color:#E80018">
     <div class="container">
             <ul class="nav navbar-nav ">
-              <li ><label style="color:#ffffff; margin-top:10px; font-size: 25px">Target</label></li>
+              <li ><label style="color:#ffffff; margin-top:10px; margin-bottom:10px; font-size: 30px;"><img src="/media/products/2019/05/12/logo.png" style="width: 15%;">Target</label></li>
 
 </div>
 </nav>
@@ -82,19 +82,19 @@
         <tr>
                     <td>PRD001</td>
                     <td>Brown bread</td">
-                    <td><img src="/media/products/2019/05/12/brown_bread.jpeg"></td>
+                    <td><img src="/media/products/2019/05/12/brown_bread.jpeg" width="50px" height="50px"></td>
                     <td>1Kg</td>
                     <td>$29.0</td>
         </tr>
         <tr class="active-row">
                     <td>PRD002</td>
                     <td>Brown bread</td">
-                    <td><img src="/media/products/2019/05/12/brown_bread.jpeg"></td>
+                    <td><img src="/media/products/2019/05/12/brown_bread.jpeg" width="50px" height="50px"></td>
                     <td>1Kg</td>
                     <td>$29.0</td>
         </tr>
     </tbody>
 </table>
-      <h3 align="center"><a href="{% url "virtual" %}" class="btn btn-success btn-lg">Proceed to Virtual supermarket >>></a><h3>
+      <h3 align="center"><a href="{% url "virtual" %}" class="btn btn-success btn-lg" style="background-color:#E80018 ">Map>>></a><h3>
 </body>
 </html>

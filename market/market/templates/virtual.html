@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Supermarket Path Finder{% endblock %}</title>
+    <title>{% block title %}Path Finder{% endblock %}</title>
     <link rel="stylesheet" href="{% static' 'css/base.css' % }"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -13,30 +13,20 @@
 
 <body>
 
-  <nav class="navbar  large navbar navbar-inverse bg-inverse" style= "width:100% ; margin: 0 auto;background-color:#000000">
+    <nav class="navbar" style= "width:100% ; background-color:#E80018">
     <div class="container">
             <ul class="nav navbar-nav ">
-              <li ><label><a class ="navbar-brand " href="{% url 'front2' %}">Home</a></label></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-            {% if user.is_authenticated %}
-            <li><a class ="navbar-link " href="{% url 'logout' %}"><span class="glyphicon glyphicon-user"></span>  logout</a></li>
-            <!-- <li><a class ="navbar-link"href="{% url 'home2' %}">Game</a></label></li> -->
-            <li><a class ="navbar-link"href="{% url 'about' %}">Advantages</a></label></li>
-            {% else %}
-            <li><a class ="navbar-link"href="{% url 'login' %}">Login</a></label></li>
-            <li><a class ="navbar-link"href="{% url 'signup' %}">Signup</a></label></li>
-            {% endif %}
-          </ul>
-      </div>
-  </nav>
+              <li ><label style="color:#ffffff; margin-top:10px; margin-bottom:10px; font-size: 30px;"><img src="/media/products/2019/05/12/logo.png" style="width: 15%;">Target</label></li>
+
+</div>
+</nav>
 <style>
   
-#section5 {padding-top:40px;height:1000px;color: #fff;  background: url('{% static "images/5.png" %}') no-repeat center center fixed; 
+/*#section5 {padding-top:40px;height:1000px;color: #fff;  background: url('{% static "images/5.png" %}') no-repeat center center fixed; 
          -webkit-background-size: cover;
          -moz-background-size: cover;
          -o-background-size: cover;
-         background-size: cover;}
+         background-size: cover;}*/
 
 button
         {
@@ -47,10 +37,15 @@ button
 
 </style>
 
-<div id="section5" class="container-fluid">
+<!-- <div id="section5" class="container-fluid"> -->
+<div class="container" align="center" style="height :100% ">
+<h1 align="left" style="color:#000000"><em>PATH 1:</em></h1>
+<br>
+<br>
+
 
 <div align="center">
- <a class ="navbar-link"href="{% url 'home2' %}"><button class="btn btn-success btn-lg" type="button" class="btn btn-success">Virtual supermarket</button></a>
+ <a class ="navbar-link"href="{% url 'home2' %}"><button class="btn btn-success btn-lg" type="button" class="btn btn-success" style="background-color:#E80018 ">Virtual store</button></a>
 </div>
 </div>
 </div>
