@@ -48,7 +48,7 @@ def start1(cart_prot,boolean5):
 
     if boolean5==True:
         global cart_lst_prot
-        cart_lst_prot=['Brown bag','Banana']
+        cart_lst_prot=['Brown bread','Banana', 'Brown bag', 'Coffee maker']
         # for item in cart_prot:
         #     items=item['product']
         #     # print("items="+str(items))

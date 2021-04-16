@@ -290,7 +290,7 @@ class Game:
                 Obstacle(self, tile_object.x, tile_object.y,
                          tile_object.width, tile_object.height)
 
-            unique_list=['Brown bag','Banana']  
+            unique_list=['Brown bread','Banana', 'Brown bag', 'Coffee maker']  
             if tile_object.name in unique_list:    # use item in cart .. find out the value of product(eg cheese)... if that value is present, add to dictionary as {product:vec}
                 Item(self, obj_center, tile_object.name)  # change to all characters to small case.. it will work
         

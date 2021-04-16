@@ -19,6 +19,9 @@
 
 
 <style>
+    td, th {
+  text-align: center;
+}
     .styled-table {
     /*border-collapse: collapse;*/
     margin-top: 20px;
@@ -31,7 +34,7 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
         .styled-table thead tr {
-            background-color: #E80018;
+            background-color: #FF0000;
             color: #ffffff;
             text-align: left;
         }
@@ -41,7 +44,7 @@
         }
         .styled-table tbody tr {
             font-weight: bold;
-            border-bottom: 1px solid #E80018;
+            border-bottom: 1px solid #FF0000;
         }
 
         .styled-table tbody tr:nth-of-type(even) {
@@ -49,7 +52,7 @@
         }
 
         .styled-table tbody tr:last-of-type {
-            border-bottom: 2px solid #E80018;
+            border-bottom: 2px solid #FF0000;
         }
         .styled-table tbody tr.active-row {
             font-weight: bold;
@@ -58,7 +61,7 @@
     </style>
 
 <body>
-    <nav class="navbar" style= "width:100% ; background-color:#E80018">
+    <nav class="navbar" style= "width:100% ; background-color:#FF0000">
     <div class="container">
             <ul class="nav navbar-nav ">
               <li ><label style="color:#ffffff; margin-top:10px; margin-bottom:10px; font-size: 30px;"><img src="/media/products/2019/05/12/logo.png" style="width: 15%;">Target</label></li>
@@ -83,18 +86,32 @@
                     <td>PRD001</td>
                     <td>Brown bread</td">
                     <td><img src="/media/products/2019/05/12/brown_bread.jpeg" width="50px" height="50px"></td>
-                    <td>1Kg</td>
+                    <td>2</td>
                     <td>$29.0</td>
         </tr>
         <tr class="active-row">
                     <td>PRD002</td>
-                    <td>Brown bread</td">
-                    <td><img src="/media/products/2019/05/12/brown_bread.jpeg" width="50px" height="50px"></td>
-                    <td>1Kg</td>
-                    <td>$29.0</td>
+                    <td>Banana</td">
+                    <td><img src="/media/products/2019/05/16/Banana.jpeg" width="50px" height="50px"></td>
+                    <td>2kg</td>
+                    <td>$15.0</td>
+        </tr>
+        <tr class="active-row">
+            <td>PRD003</td>
+            <td>Brown Bag</td">
+            <td><img src="/media/products/2019/05/16/Brown_bag.jpeg" width="50px" height="50px"></td>
+            <td>1</td>
+            <td>$50.0</td>
+        </tr>
+        <tr class="active-row">
+            <td>PRD004</td>
+            <td>Coffee maker</td">
+            <td><img src="/media/products/2019/05/16/coffee_maker.jpeg" width="50px" height="50px"></td>
+            <td>1</td>
+            <td>$95.0</td>
         </tr>
     </tbody>
 </table>
-      <h3 align="center"><a href="{% url "virtual" %}" class="btn btn-success btn-lg" style="background-color:#E80018 ">Map>>></a><h3>
+      <h3 align="center"><a href="{% url "virtual" %}" class="btn btn-success btn-lg" style="background-color:#FF0000 ">Map>>></a><h3>
 </body>
 </html>
